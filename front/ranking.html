@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórmula 1 - Classificação</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Classificação do Campeonato de Fórmula 1</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Posição</th>
+            <th>Nome</th>
+            <th>Nacionalidade</th>
+            <th>Equipe</th>
+            <th>Pontos</th>
+        </tr>
+    </thead>
+    <tbody id="f1-table-body">
+        <!-- Aqui os dados serão inseridos via JavaScript -->
+    </tbody>
+</table>
+
+<script>
+    var data = [
+        {
+            "position": "1",
+            "name": "Max Verstappen",
+            "nationality": "NED",
+            "team": "Red Bull",
+            "points": "77"
+        },
+        {
+            "position": "2",
+            "name": "Sergio Perez",
+            "nationality": "MEX",
+            "team": "Red Bull",
+            "points": "64"
+        },
+        {
+            "position": "3",
+            "name": "Charles Leclerc",
+            "nationality": "MON",
+            "team": "Ferrari",
+            "points": "59"
+        },
+        {
+            "position": "4",
+            "name": "Carlos Sainz",
+            "nationality": "ESP",
+            "team": "Ferrari",
+            "points": "55"
+        },
+        {
+            "position": "5",
+            "name": "Lando Norris",
+            "nationality": "GBR",
+            "team": "McLaren",
+            "points": "37"
+        },
+        {
+            "position": "6",
+            "name": "Oscar Piastri",
+            "nationality": "AUS",
+            "team": "McLaren",
+            "points": "32"
+        },
+        {
+            "position": "7",
+            "name": "George Russell",
+            "nationality": "GBR",
+            "team": "Mercedes",
+            "points": "24"
+        },
+        {
+            "position": "8",
+            "name": "Fernando Alonso",
+            "nationality": "ESP",
+            "team": "Aston Martin",
+            "points": "24"
+        },
+        {
+            "position": "9",
+            "name": "Lewis Hamilton",
+            "nationality": "GBR",
+            "team": "Mercedes",
+            "points": "10"
+        },
+        {
+            "position": "10",
+            "name": "Lance Stroll",
+            "nationality": "CAN",
+            "team": "Aston Martin",
+            "points": "9"
+        },
+        {
+            "position": "11",
+            "name": "Yuki Tsunoda",
+            "nationality": "JPN",
+            "team": "RB",
+            "points": "7"
+        },
+        {
+            "position": "12",
+            "name": "Oliver Bearman",
+            "nationality": "GBR",
+            "team": "Ferrari",
+            "points": "6"
+        },
+        {
+            "position": "13",
+            "name": "Nico Hulkenberg",
+            "nationality": "GER",
+            "team": "Haas",
+            "points": "3"
+        },
+        {
+            "position": "14",
+            "name": "Kevin Magnussen",
+            "nationality": "DEN",
+            "team": "Haas",
+            "points": "1"
+        },
+        {
+            "position": "15",
+            "name": "Alex Albon",
+            "nationality": "THA",
+            "team": "Williams",
+            "points": "0"
+        },
+        {
+            "position": "16",
+            "name": "Guanyu Zhou",
+            "nationality": "CHN",
+            "team": "Sauber",
+            "points": "0"
+        },
+        {
+            "position": "17",
+            "name": "Daniel Ricciardo",
+            "nationality": "AUS",
+            "team": "RB",
+            "points": "0"
+        },
+        {
+            "position": "18",
+            "name": "Esteban Ocon",
+            "nationality": "FRA",
+            "team": "Alpine",
+            "points": "0"
+        },
+        {
+            "position": "19",
+            "name": "Pierre Gasly",
+            "nationality": "FRA",
+            "team": "Alpine",
+            "points": "0"
+        },
+        {
+            "position": "20",
+            "name": "Valtteri Bottas",
+            "nationality": "FIN",
+            "team": "Sauber",
+            "points": "0"
+        },
+        {
+            "position": "21",
+            "name": "Logan Sargeant",
+            "nationality": "USA",
+            "team": "Williams",
+            "points": "0"
+        }
+    ];
+
+    // Função para renderizar os dados na tabela
+    function renderData(data) {
+        var tableBody = document.getElementById('f1-table-body');
+        tableBody.innerHTML = '';
+
+        data.forEach(function(driver) {
+            var row = document.createElement('tr');
+            row.innerHTML = '<td>' + driver.position + '</td>' +
+                            '<td>' + driver.name + '</td>' +
+                            '<td>' + driver.nationality + '</td>' +
+                            '<td>' + driver.team + '</td>' +
+                            '<td>' + driver.points + '</td>';
+            tableBody.appendChild(row);
+        });
+    }
+
+    // Chamando a função para renderizar os dados na tabela
+    renderData(data);
+</script>
+
+</body>
+</html>
